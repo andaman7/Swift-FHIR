@@ -47,7 +47,7 @@ public struct Base64Binary: ExpressibleByStringLiteral, CustomStringConvertible,
 	// MARK: - Printable, Equatable and Comparable
 	
 	public var description: String {
-		return "<Base64Binary; \(nil != value ? value!.characters.count : 0) chars>"
+		return "<Base64Binary; \(nil != value ? value!.count : 0) chars>"
 	}
 	
 	public static func <(lh: Base64Binary, rh: Base64Binary) -> Bool {

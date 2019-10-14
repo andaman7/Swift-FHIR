@@ -57,7 +57,7 @@ open class FHIRAbstractBase: CustomStringConvertible {
 		let superfluous = json?.keys.filter() { !present.contains($0) }
 		if let supflu = superfluous, !supflu.isEmpty {
 			for sup in supflu {
-				if let first = sup.characters.first, "_" != first {
+				if let first = sup.first, "_" != first {
 					errors.append(FHIRJSONError(key: sup, has: type(of: json![sup]!)))
 				}
 			}
