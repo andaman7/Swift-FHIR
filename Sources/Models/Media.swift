@@ -76,7 +76,7 @@ public class Media: DomainResource {
 					self.content = Attachment(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "content", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "content", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -88,7 +88,7 @@ public class Media: DomainResource {
 					self.deviceName = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "deviceName", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "deviceName", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["duration"] {
@@ -97,7 +97,7 @@ public class Media: DomainResource {
 					self.duration = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "duration", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "duration", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["frames"] {
@@ -106,7 +106,7 @@ public class Media: DomainResource {
 					self.frames = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "frames", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "frames", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["height"] {
@@ -115,7 +115,7 @@ public class Media: DomainResource {
 					self.height = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "height", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "height", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -124,7 +124,7 @@ public class Media: DomainResource {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["operator"] {
@@ -133,7 +133,7 @@ public class Media: DomainResource {
 					self.operator_fhir = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "operator", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "operator", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["subject"] {
@@ -142,7 +142,7 @@ public class Media: DomainResource {
 					self.subject = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subject", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subject", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["subtype"] {
@@ -151,7 +151,7 @@ public class Media: DomainResource {
 					self.subtype = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subtype", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subtype", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -160,7 +160,7 @@ public class Media: DomainResource {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -172,7 +172,7 @@ public class Media: DomainResource {
 					self.view = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "view", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "view", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["width"] {
@@ -181,7 +181,7 @@ public class Media: DomainResource {
 					self.width = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "width", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "width", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

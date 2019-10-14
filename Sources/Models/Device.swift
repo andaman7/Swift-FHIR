@@ -92,7 +92,7 @@ public class Device: DomainResource {
 					self.contact = ContactPoint.instantiate(fromArray: val, owner: self) as? [ContactPoint]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contact", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contact", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["expiry"] {
@@ -101,7 +101,7 @@ public class Device: DomainResource {
 					self.expiry = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "expiry", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "expiry", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -110,7 +110,7 @@ public class Device: DomainResource {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["location"] {
@@ -119,7 +119,7 @@ public class Device: DomainResource {
 					self.location = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "location", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "location", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["lotNumber"] {
@@ -128,7 +128,7 @@ public class Device: DomainResource {
 					self.lotNumber = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "lotNumber", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "lotNumber", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["manufactureDate"] {
@@ -137,7 +137,7 @@ public class Device: DomainResource {
 					self.manufactureDate = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "manufactureDate", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "manufactureDate", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["manufacturer"] {
@@ -146,7 +146,7 @@ public class Device: DomainResource {
 					self.manufacturer = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "manufacturer", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "manufacturer", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["model"] {
@@ -155,7 +155,7 @@ public class Device: DomainResource {
 					self.model = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "model", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "model", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["note"] {
@@ -164,7 +164,7 @@ public class Device: DomainResource {
 					self.note = Annotation.instantiate(fromArray: val, owner: self) as? [Annotation]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "note", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "note", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["owner"] {
@@ -173,7 +173,7 @@ public class Device: DomainResource {
 					self.owner = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "owner", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "owner", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patient"] {
@@ -182,7 +182,7 @@ public class Device: DomainResource {
 					self.patient = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patient", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patient", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["status"] {
@@ -191,7 +191,7 @@ public class Device: DomainResource {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -200,7 +200,7 @@ public class Device: DomainResource {
 					self.type = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -212,7 +212,7 @@ public class Device: DomainResource {
 					self.udi = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "udi", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "udi", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["url"] {
@@ -221,7 +221,7 @@ public class Device: DomainResource {
 					self.url = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "url", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "url", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["version"] {
@@ -230,7 +230,7 @@ public class Device: DomainResource {
 					self.version = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "version", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "version", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

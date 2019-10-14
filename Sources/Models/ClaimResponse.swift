@@ -1660,7 +1660,7 @@ public class ClaimResponseNote: BackboneElement {
 					self.number = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "number", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "number", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["text"] {
@@ -1669,7 +1669,7 @@ public class ClaimResponseNote: BackboneElement {
 					self.text = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "text", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "text", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -1678,7 +1678,7 @@ public class ClaimResponseNote: BackboneElement {
 					self.type = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

@@ -172,7 +172,7 @@ public class AuditEventEvent: BackboneElement {
 					self.action = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "action", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "action", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["dateTime"] {
@@ -181,7 +181,7 @@ public class AuditEventEvent: BackboneElement {
 					self.dateTime = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "dateTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "dateTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -193,7 +193,7 @@ public class AuditEventEvent: BackboneElement {
 					self.outcome = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "outcome", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "outcome", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["outcomeDesc"] {
@@ -202,7 +202,7 @@ public class AuditEventEvent: BackboneElement {
 					self.outcomeDesc = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "outcomeDesc", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "outcomeDesc", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["purposeOfEvent"] {
@@ -211,7 +211,7 @@ public class AuditEventEvent: BackboneElement {
 					self.purposeOfEvent = Coding.instantiate(fromArray: val, owner: self) as? [Coding]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "purposeOfEvent", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "purposeOfEvent", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["subtype"] {
@@ -220,7 +220,7 @@ public class AuditEventEvent: BackboneElement {
 					self.subtype = Coding.instantiate(fromArray: val, owner: self) as? [Coding]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subtype", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subtype", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -229,7 +229,7 @@ public class AuditEventEvent: BackboneElement {
 					self.type = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -322,7 +322,7 @@ public class AuditEventObject: BackboneElement {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["detail"] {
@@ -331,7 +331,7 @@ public class AuditEventObject: BackboneElement {
 					self.detail = AuditEventObjectDetail.instantiate(fromArray: val, owner: self) as? [AuditEventObjectDetail]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "detail", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "detail", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -340,7 +340,7 @@ public class AuditEventObject: BackboneElement {
 					self.identifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["lifecycle"] {
@@ -349,7 +349,7 @@ public class AuditEventObject: BackboneElement {
 					self.lifecycle = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "lifecycle", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "lifecycle", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["name"] {
@@ -358,7 +358,7 @@ public class AuditEventObject: BackboneElement {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["query"] {
@@ -367,7 +367,7 @@ public class AuditEventObject: BackboneElement {
 					self.query = Base64Binary(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "query", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "query", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["reference"] {
@@ -376,7 +376,7 @@ public class AuditEventObject: BackboneElement {
 					self.reference = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reference", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reference", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["role"] {
@@ -385,7 +385,7 @@ public class AuditEventObject: BackboneElement {
 					self.role = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "role", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "role", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["securityLabel"] {
@@ -394,7 +394,7 @@ public class AuditEventObject: BackboneElement {
 					self.securityLabel = Coding.instantiate(fromArray: val, owner: self) as? [Coding]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "securityLabel", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "securityLabel", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -403,7 +403,7 @@ public class AuditEventObject: BackboneElement {
 					self.type = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -485,7 +485,7 @@ public class AuditEventObjectDetail: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -497,7 +497,7 @@ public class AuditEventObjectDetail: BackboneElement {
 					self.value = Base64Binary(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "value", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "value", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -761,7 +761,7 @@ public class AuditEventParticipantNetwork: BackboneElement {
 					self.address = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "address", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "address", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -770,7 +770,7 @@ public class AuditEventParticipantNetwork: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -830,7 +830,7 @@ public class AuditEventSource: BackboneElement {
 					self.identifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -842,7 +842,7 @@ public class AuditEventSource: BackboneElement {
 					self.site = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "site", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "site", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -851,7 +851,7 @@ public class AuditEventSource: BackboneElement {
 					self.type = Coding.instantiate(fromArray: val, owner: self) as? [Coding]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

@@ -657,7 +657,7 @@ public class PatientLink: BackboneElement {
 					self.other = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "other", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "other", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -669,7 +669,7 @@ public class PatientLink: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

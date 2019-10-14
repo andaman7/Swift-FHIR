@@ -887,7 +887,7 @@ public class ObservationRelated: BackboneElement {
 					self.target = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "target", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "target", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -899,7 +899,7 @@ public class ObservationRelated: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

@@ -1290,7 +1290,7 @@ public class TestScriptSetupActionOperation: BackboneElement {
 					self.accept = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "accept", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "accept", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["contentType"] {
@@ -1299,7 +1299,7 @@ public class TestScriptSetupActionOperation: BackboneElement {
 					self.contentType = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contentType", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contentType", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["description"] {
@@ -1308,7 +1308,7 @@ public class TestScriptSetupActionOperation: BackboneElement {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["destination"] {
@@ -1317,7 +1317,7 @@ public class TestScriptSetupActionOperation: BackboneElement {
 					self.destination = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "destination", wants: Int.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "destination", wants: Int.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["encodeRequestUrl"] {
@@ -1326,7 +1326,7 @@ public class TestScriptSetupActionOperation: BackboneElement {
 					self.encodeRequestUrl = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "encodeRequestUrl", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "encodeRequestUrl", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["label"] {
@@ -1335,7 +1335,7 @@ public class TestScriptSetupActionOperation: BackboneElement {
 					self.label = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "label", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "label", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["params"] {
@@ -1344,7 +1344,7 @@ public class TestScriptSetupActionOperation: BackboneElement {
 					self.params = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "params", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "params", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["requestHeader"] {
@@ -1353,7 +1353,7 @@ public class TestScriptSetupActionOperation: BackboneElement {
 					self.requestHeader = TestScriptSetupActionOperationRequestHeader.instantiate(fromArray: val, owner: self) as? [TestScriptSetupActionOperationRequestHeader]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "requestHeader", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "requestHeader", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["resource"] {
@@ -1362,7 +1362,7 @@ public class TestScriptSetupActionOperation: BackboneElement {
 					self.resource = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "resource", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "resource", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["responseId"] {
@@ -1371,7 +1371,7 @@ public class TestScriptSetupActionOperation: BackboneElement {
 					self.responseId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "responseId", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "responseId", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["sourceId"] {
@@ -1380,7 +1380,7 @@ public class TestScriptSetupActionOperation: BackboneElement {
 					self.sourceId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "sourceId", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "sourceId", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["targetId"] {
@@ -1389,7 +1389,7 @@ public class TestScriptSetupActionOperation: BackboneElement {
 					self.targetId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "targetId", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "targetId", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -1398,7 +1398,7 @@ public class TestScriptSetupActionOperation: BackboneElement {
 					self.type = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["url"] {
@@ -1407,7 +1407,7 @@ public class TestScriptSetupActionOperation: BackboneElement {
 					self.url = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "url", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "url", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

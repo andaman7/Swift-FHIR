@@ -84,7 +84,7 @@ public class NamingSystem: DomainResource {
 					self.contact = NamingSystemContact.instantiate(fromArray: val, owner: self) as? [NamingSystemContact]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contact", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contact", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["date"] {
@@ -93,7 +93,7 @@ public class NamingSystem: DomainResource {
 					self.date = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "date", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "date", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -105,7 +105,7 @@ public class NamingSystem: DomainResource {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["kind"] {
@@ -114,7 +114,7 @@ public class NamingSystem: DomainResource {
 					self.kind = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "kind", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "kind", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -126,7 +126,7 @@ public class NamingSystem: DomainResource {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -138,7 +138,7 @@ public class NamingSystem: DomainResource {
 					self.publisher = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "publisher", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "publisher", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["replacedBy"] {
@@ -147,7 +147,7 @@ public class NamingSystem: DomainResource {
 					self.replacedBy = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "replacedBy", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "replacedBy", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["responsible"] {
@@ -156,7 +156,7 @@ public class NamingSystem: DomainResource {
 					self.responsible = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "responsible", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "responsible", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["status"] {
@@ -165,7 +165,7 @@ public class NamingSystem: DomainResource {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -177,7 +177,7 @@ public class NamingSystem: DomainResource {
 					self.type = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["uniqueId"] {
@@ -186,7 +186,7 @@ public class NamingSystem: DomainResource {
 					self.uniqueId = NamingSystemUniqueId.instantiate(fromArray: val, owner: self) as? [NamingSystemUniqueId]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "uniqueId", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "uniqueId", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -198,7 +198,7 @@ public class NamingSystem: DomainResource {
 					self.usage = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "usage", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "usage", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["useContext"] {
@@ -207,7 +207,7 @@ public class NamingSystem: DomainResource {
 					self.useContext = CodeableConcept.instantiate(fromArray: val, owner: self) as? [CodeableConcept]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "useContext", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "useContext", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -368,7 +368,7 @@ public class NamingSystemUniqueId: BackboneElement {
 					self.period = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["preferred"] {
@@ -377,7 +377,7 @@ public class NamingSystemUniqueId: BackboneElement {
 					self.preferred = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "preferred", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "preferred", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -386,7 +386,7 @@ public class NamingSystemUniqueId: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -398,7 +398,7 @@ public class NamingSystemUniqueId: BackboneElement {
 					self.value = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "value", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "value", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

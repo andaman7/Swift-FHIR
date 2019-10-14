@@ -569,7 +569,7 @@ public class ImagingStudySeriesInstance: BackboneElement {
 					self.content = Attachment.instantiate(fromArray: val, owner: self) as? [Attachment]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "content", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "content", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["number"] {
@@ -578,7 +578,7 @@ public class ImagingStudySeriesInstance: BackboneElement {
 					self.number = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "number", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "number", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["sopClass"] {
@@ -587,7 +587,7 @@ public class ImagingStudySeriesInstance: BackboneElement {
 					self.sopClass = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "sopClass", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "sopClass", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -599,7 +599,7 @@ public class ImagingStudySeriesInstance: BackboneElement {
 					self.title = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "title", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "title", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -608,7 +608,7 @@ public class ImagingStudySeriesInstance: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["uid"] {
@@ -617,7 +617,7 @@ public class ImagingStudySeriesInstance: BackboneElement {
 					self.uid = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "uid", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "uid", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

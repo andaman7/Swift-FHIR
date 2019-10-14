@@ -383,7 +383,7 @@ public class QuestionnaireGroupQuestion: BackboneElement {
 					self.concept = Coding.instantiate(fromArray: val, owner: self) as? [Coding]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "concept", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "concept", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["group"] {
@@ -392,7 +392,7 @@ public class QuestionnaireGroupQuestion: BackboneElement {
 					self.group = QuestionnaireGroup.instantiate(fromArray: val, owner: self) as? [QuestionnaireGroup]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "group", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "group", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["linkId"] {
@@ -401,7 +401,7 @@ public class QuestionnaireGroupQuestion: BackboneElement {
 					self.linkId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "linkId", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "linkId", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["option"] {
@@ -410,7 +410,7 @@ public class QuestionnaireGroupQuestion: BackboneElement {
 					self.option = Coding.instantiate(fromArray: val, owner: self) as? [Coding]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "option", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "option", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["options"] {
@@ -419,7 +419,7 @@ public class QuestionnaireGroupQuestion: BackboneElement {
 					self.options = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "options", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "options", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["repeats"] {
@@ -428,7 +428,7 @@ public class QuestionnaireGroupQuestion: BackboneElement {
 					self.repeats = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "repeats", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "repeats", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["required"] {
@@ -437,7 +437,7 @@ public class QuestionnaireGroupQuestion: BackboneElement {
 					self.required = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "required", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "required", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["text"] {
@@ -446,7 +446,7 @@ public class QuestionnaireGroupQuestion: BackboneElement {
 					self.text = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "text", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "text", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -455,7 +455,7 @@ public class QuestionnaireGroupQuestion: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

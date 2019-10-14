@@ -52,7 +52,7 @@ public class Identifier: Element {
 					self.assigner = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "assigner", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "assigner", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["period"] {
@@ -61,7 +61,7 @@ public class Identifier: Element {
 					self.period = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["system"] {
@@ -70,7 +70,7 @@ public class Identifier: Element {
 					self.system = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "system", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "system", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -79,7 +79,7 @@ public class Identifier: Element {
 					self.type = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["use"] {
@@ -88,7 +88,7 @@ public class Identifier: Element {
 					self.use = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "use", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "use", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["value"] {
@@ -97,7 +97,7 @@ public class Identifier: Element {
 					self.value = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "value", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "value", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

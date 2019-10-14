@@ -91,7 +91,7 @@ public class Composition: DomainResource {
 					self.attester = CompositionAttester.instantiate(fromArray: val, owner: self) as? [CompositionAttester]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "attester", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "attester", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["author"] {
@@ -100,7 +100,7 @@ public class Composition: DomainResource {
 					self.author = Reference.instantiate(fromArray: val, owner: self) as? [Reference]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "author", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "author", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -112,7 +112,7 @@ public class Composition: DomainResource {
 					self.class_fhir = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "class", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "class", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["confidentiality"] {
@@ -121,7 +121,7 @@ public class Composition: DomainResource {
 					self.confidentiality = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "confidentiality", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "confidentiality", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["custodian"] {
@@ -130,7 +130,7 @@ public class Composition: DomainResource {
 					self.custodian = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "custodian", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "custodian", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["date"] {
@@ -139,7 +139,7 @@ public class Composition: DomainResource {
 					self.date = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "date", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "date", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -151,7 +151,7 @@ public class Composition: DomainResource {
 					self.encounter = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "encounter", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "encounter", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["event"] {
@@ -160,7 +160,7 @@ public class Composition: DomainResource {
 					self.event = CompositionEvent.instantiate(fromArray: val, owner: self) as? [CompositionEvent]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "event", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "event", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -169,7 +169,7 @@ public class Composition: DomainResource {
 					self.identifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["section"] {
@@ -178,7 +178,7 @@ public class Composition: DomainResource {
 					self.section = CompositionSection.instantiate(fromArray: val, owner: self) as? [CompositionSection]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "section", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "section", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["status"] {
@@ -187,7 +187,7 @@ public class Composition: DomainResource {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -199,7 +199,7 @@ public class Composition: DomainResource {
 					self.subject = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subject", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subject", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -211,7 +211,7 @@ public class Composition: DomainResource {
 					self.title = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "title", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "title", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -223,7 +223,7 @@ public class Composition: DomainResource {
 					self.type = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

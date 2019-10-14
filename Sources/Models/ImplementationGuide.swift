@@ -427,7 +427,7 @@ public class ImplementationGuideDependency: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -439,7 +439,7 @@ public class ImplementationGuideDependency: BackboneElement {
 					self.uri = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "uri", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "uri", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -502,7 +502,7 @@ public class ImplementationGuideGlobal: BackboneElement {
 					self.profile = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "profile", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "profile", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -514,7 +514,7 @@ public class ImplementationGuideGlobal: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -838,7 +838,7 @@ public class ImplementationGuidePage: BackboneElement {
 					self.format = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "format", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "format", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["kind"] {
@@ -847,7 +847,7 @@ public class ImplementationGuidePage: BackboneElement {
 					self.kind = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "kind", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "kind", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -859,7 +859,7 @@ public class ImplementationGuidePage: BackboneElement {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -871,7 +871,7 @@ public class ImplementationGuidePage: BackboneElement {
 					self.package = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "package", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "package", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["page"] {
@@ -880,7 +880,7 @@ public class ImplementationGuidePage: BackboneElement {
 					self.page = ImplementationGuidePage.instantiate(fromArray: val, owner: self) as? [ImplementationGuidePage]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "page", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "page", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["source"] {
@@ -889,7 +889,7 @@ public class ImplementationGuidePage: BackboneElement {
 					self.source = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "source", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "source", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -901,7 +901,7 @@ public class ImplementationGuidePage: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

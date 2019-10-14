@@ -67,7 +67,7 @@ public class SupplyDelivery: DomainResource {
 					self.destination = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "destination", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "destination", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -76,7 +76,7 @@ public class SupplyDelivery: DomainResource {
 					self.identifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patient"] {
@@ -85,7 +85,7 @@ public class SupplyDelivery: DomainResource {
 					self.patient = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patient", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patient", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["quantity"] {
@@ -94,7 +94,7 @@ public class SupplyDelivery: DomainResource {
 					self.quantity = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "quantity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "quantity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["receiver"] {
@@ -103,7 +103,7 @@ public class SupplyDelivery: DomainResource {
 					self.receiver = Reference.instantiate(fromArray: val, owner: self) as? [Reference]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "receiver", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "receiver", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["status"] {
@@ -112,7 +112,7 @@ public class SupplyDelivery: DomainResource {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["suppliedItem"] {
@@ -121,7 +121,7 @@ public class SupplyDelivery: DomainResource {
 					self.suppliedItem = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "suppliedItem", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "suppliedItem", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["supplier"] {
@@ -130,7 +130,7 @@ public class SupplyDelivery: DomainResource {
 					self.supplier = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "supplier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "supplier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["time"] {
@@ -139,7 +139,7 @@ public class SupplyDelivery: DomainResource {
 					self.time = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "time", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "time", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -148,7 +148,7 @@ public class SupplyDelivery: DomainResource {
 					self.type = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["whenPrepared"] {
@@ -157,7 +157,7 @@ public class SupplyDelivery: DomainResource {
 					self.whenPrepared = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "whenPrepared", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "whenPrepared", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

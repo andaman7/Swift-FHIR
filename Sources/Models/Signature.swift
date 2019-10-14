@@ -65,7 +65,7 @@ public class Signature: Element {
 					self.blob = Base64Binary(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "blob", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "blob", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -77,7 +77,7 @@ public class Signature: Element {
 					self.contentType = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contentType", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contentType", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -89,7 +89,7 @@ public class Signature: Element {
 					self.type = Coding.instantiate(fromArray: val, owner: self) as? [Coding]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -101,7 +101,7 @@ public class Signature: Element {
 					self.when = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "when", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "when", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -113,7 +113,7 @@ public class Signature: Element {
 					self.whoReference = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "whoReference", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "whoReference", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["whoUri"] {
@@ -122,7 +122,7 @@ public class Signature: Element {
 					self.whoUri = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "whoUri", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "whoUri", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			

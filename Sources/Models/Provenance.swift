@@ -357,7 +357,7 @@ public class ProvenanceAgentRelatedAgent: BackboneElement {
 					self.target = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "target", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "target", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -369,7 +369,7 @@ public class ProvenanceAgentRelatedAgent: BackboneElement {
 					self.type = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -440,7 +440,7 @@ public class ProvenanceEntity: BackboneElement {
 					self.agent = ProvenanceAgent(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "agent", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "agent", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["display"] {
@@ -449,7 +449,7 @@ public class ProvenanceEntity: BackboneElement {
 					self.display = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "display", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "display", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["reference"] {
@@ -458,7 +458,7 @@ public class ProvenanceEntity: BackboneElement {
 					self.reference = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reference", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reference", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -470,7 +470,7 @@ public class ProvenanceEntity: BackboneElement {
 					self.role = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "role", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "role", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -482,7 +482,7 @@ public class ProvenanceEntity: BackboneElement {
 					self.type = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

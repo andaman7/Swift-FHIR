@@ -73,7 +73,7 @@ public class DeviceComponent: DomainResource {
 					self.identifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -85,7 +85,7 @@ public class DeviceComponent: DomainResource {
 					self.languageCode = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "languageCode", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "languageCode", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["lastSystemChange"] {
@@ -94,7 +94,7 @@ public class DeviceComponent: DomainResource {
 					self.lastSystemChange = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "lastSystemChange", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "lastSystemChange", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -106,7 +106,7 @@ public class DeviceComponent: DomainResource {
 					self.measurementPrinciple = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "measurementPrinciple", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "measurementPrinciple", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["operationalStatus"] {
@@ -115,7 +115,7 @@ public class DeviceComponent: DomainResource {
 					self.operationalStatus = CodeableConcept.instantiate(fromArray: val, owner: self) as? [CodeableConcept]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "operationalStatus", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "operationalStatus", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["parameterGroup"] {
@@ -124,7 +124,7 @@ public class DeviceComponent: DomainResource {
 					self.parameterGroup = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "parameterGroup", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "parameterGroup", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["parent"] {
@@ -133,7 +133,7 @@ public class DeviceComponent: DomainResource {
 					self.parent = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "parent", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "parent", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["productionSpecification"] {
@@ -142,7 +142,7 @@ public class DeviceComponent: DomainResource {
 					self.productionSpecification = DeviceComponentProductionSpecification.instantiate(fromArray: val, owner: self) as? [DeviceComponentProductionSpecification]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "productionSpecification", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "productionSpecification", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["source"] {
@@ -151,7 +151,7 @@ public class DeviceComponent: DomainResource {
 					self.source = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "source", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "source", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -160,7 +160,7 @@ public class DeviceComponent: DomainResource {
 					self.type = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

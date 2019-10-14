@@ -65,7 +65,7 @@ public class Address: Element {
 					self.city = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "city", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "city", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["country"] {
@@ -74,7 +74,7 @@ public class Address: Element {
 					self.country = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "country", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "country", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["district"] {
@@ -83,7 +83,7 @@ public class Address: Element {
 					self.district = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "district", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "district", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["line"] {
@@ -92,7 +92,7 @@ public class Address: Element {
 					self.line = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "line", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "line", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["period"] {
@@ -101,7 +101,7 @@ public class Address: Element {
 					self.period = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["postalCode"] {
@@ -110,7 +110,7 @@ public class Address: Element {
 					self.postalCode = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "postalCode", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "postalCode", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["state"] {
@@ -119,7 +119,7 @@ public class Address: Element {
 					self.state = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "state", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "state", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["text"] {
@@ -128,7 +128,7 @@ public class Address: Element {
 					self.text = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "text", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "text", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -137,7 +137,7 @@ public class Address: Element {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["use"] {
@@ -146,7 +146,7 @@ public class Address: Element {
 					self.use = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "use", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "use", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

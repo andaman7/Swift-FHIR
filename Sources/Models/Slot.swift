@@ -65,7 +65,7 @@ public class Slot: DomainResource {
 					self.comment = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "comment", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "comment", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["end"] {
@@ -74,7 +74,7 @@ public class Slot: DomainResource {
 					self.end = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "end", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "end", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -86,7 +86,7 @@ public class Slot: DomainResource {
 					self.freeBusyType = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "freeBusyType", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "freeBusyType", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -98,7 +98,7 @@ public class Slot: DomainResource {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["overbooked"] {
@@ -107,7 +107,7 @@ public class Slot: DomainResource {
 					self.overbooked = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "overbooked", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "overbooked", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["schedule"] {
@@ -116,7 +116,7 @@ public class Slot: DomainResource {
 					self.schedule = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "schedule", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "schedule", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -128,7 +128,7 @@ public class Slot: DomainResource {
 					self.start = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "start", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "start", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -140,7 +140,7 @@ public class Slot: DomainResource {
 					self.type = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

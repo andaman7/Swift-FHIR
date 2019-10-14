@@ -84,7 +84,7 @@ public class AllergyIntolerance: DomainResource {
 					self.category = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "category", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "category", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["criticality"] {
@@ -93,7 +93,7 @@ public class AllergyIntolerance: DomainResource {
 					self.criticality = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "criticality", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "criticality", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -102,7 +102,7 @@ public class AllergyIntolerance: DomainResource {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["lastOccurence"] {
@@ -111,7 +111,7 @@ public class AllergyIntolerance: DomainResource {
 					self.lastOccurence = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "lastOccurence", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "lastOccurence", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["note"] {
@@ -120,7 +120,7 @@ public class AllergyIntolerance: DomainResource {
 					self.note = Annotation(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "note", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "note", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["onset"] {
@@ -129,7 +129,7 @@ public class AllergyIntolerance: DomainResource {
 					self.onset = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "onset", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "onset", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patient"] {
@@ -138,7 +138,7 @@ public class AllergyIntolerance: DomainResource {
 					self.patient = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patient", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patient", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -150,7 +150,7 @@ public class AllergyIntolerance: DomainResource {
 					self.reaction = AllergyIntoleranceReaction.instantiate(fromArray: val, owner: self) as? [AllergyIntoleranceReaction]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reaction", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reaction", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["recordedDate"] {
@@ -159,7 +159,7 @@ public class AllergyIntolerance: DomainResource {
 					self.recordedDate = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "recordedDate", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "recordedDate", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["recorder"] {
@@ -168,7 +168,7 @@ public class AllergyIntolerance: DomainResource {
 					self.recorder = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "recorder", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "recorder", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["reporter"] {
@@ -177,7 +177,7 @@ public class AllergyIntolerance: DomainResource {
 					self.reporter = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "reporter", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "reporter", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["status"] {
@@ -186,7 +186,7 @@ public class AllergyIntolerance: DomainResource {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["substance"] {
@@ -195,7 +195,7 @@ public class AllergyIntolerance: DomainResource {
 					self.substance = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "substance", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "substance", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -207,7 +207,7 @@ public class AllergyIntolerance: DomainResource {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

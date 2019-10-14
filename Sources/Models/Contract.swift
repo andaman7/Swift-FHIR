@@ -91,7 +91,7 @@ public class Contract: DomainResource {
 					self.action = CodeableConcept.instantiate(fromArray: val, owner: self) as? [CodeableConcept]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "action", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "action", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["actionReason"] {
@@ -100,7 +100,7 @@ public class Contract: DomainResource {
 					self.actionReason = CodeableConcept.instantiate(fromArray: val, owner: self) as? [CodeableConcept]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "actionReason", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "actionReason", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["actor"] {
@@ -109,7 +109,7 @@ public class Contract: DomainResource {
 					self.actor = ContractActor.instantiate(fromArray: val, owner: self) as? [ContractActor]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "actor", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "actor", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["applies"] {
@@ -118,7 +118,7 @@ public class Contract: DomainResource {
 					self.applies = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "applies", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "applies", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["authority"] {
@@ -127,7 +127,7 @@ public class Contract: DomainResource {
 					self.authority = Reference.instantiate(fromArray: val, owner: self) as? [Reference]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "authority", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "authority", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["bindingAttachment"] {
@@ -136,7 +136,7 @@ public class Contract: DomainResource {
 					self.bindingAttachment = Attachment(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "bindingAttachment", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "bindingAttachment", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["bindingReference"] {
@@ -145,7 +145,7 @@ public class Contract: DomainResource {
 					self.bindingReference = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "bindingReference", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "bindingReference", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["domain"] {
@@ -154,7 +154,7 @@ public class Contract: DomainResource {
 					self.domain = Reference.instantiate(fromArray: val, owner: self) as? [Reference]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "domain", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "domain", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["friendly"] {
@@ -163,7 +163,7 @@ public class Contract: DomainResource {
 					self.friendly = ContractFriendly.instantiate(fromArray: val, owner: self) as? [ContractFriendly]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "friendly", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "friendly", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -172,7 +172,7 @@ public class Contract: DomainResource {
 					self.identifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["issued"] {
@@ -181,7 +181,7 @@ public class Contract: DomainResource {
 					self.issued = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "issued", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "issued", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["legal"] {
@@ -190,7 +190,7 @@ public class Contract: DomainResource {
 					self.legal = ContractLegal.instantiate(fromArray: val, owner: self) as? [ContractLegal]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "legal", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "legal", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["rule"] {
@@ -199,7 +199,7 @@ public class Contract: DomainResource {
 					self.rule = ContractRule.instantiate(fromArray: val, owner: self) as? [ContractRule]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "rule", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "rule", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["signer"] {
@@ -208,7 +208,7 @@ public class Contract: DomainResource {
 					self.signer = ContractSigner.instantiate(fromArray: val, owner: self) as? [ContractSigner]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "signer", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "signer", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["subType"] {
@@ -217,7 +217,7 @@ public class Contract: DomainResource {
 					self.subType = CodeableConcept.instantiate(fromArray: val, owner: self) as? [CodeableConcept]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subType", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subType", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["subject"] {
@@ -226,7 +226,7 @@ public class Contract: DomainResource {
 					self.subject = Reference.instantiate(fromArray: val, owner: self) as? [Reference]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subject", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subject", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["term"] {
@@ -235,7 +235,7 @@ public class Contract: DomainResource {
 					self.term = ContractTerm.instantiate(fromArray: val, owner: self) as? [ContractTerm]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "term", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "term", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -244,7 +244,7 @@ public class Contract: DomainResource {
 					self.type = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["valuedItem"] {
@@ -253,7 +253,7 @@ public class Contract: DomainResource {
 					self.valuedItem = ContractValuedItem.instantiate(fromArray: val, owner: self) as? [ContractValuedItem]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "valuedItem", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "valuedItem", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -664,7 +664,7 @@ public class ContractSigner: BackboneElement {
 					self.party = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "party", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "party", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -676,7 +676,7 @@ public class ContractSigner: BackboneElement {
 					self.signature = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "signature", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "signature", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -688,7 +688,7 @@ public class ContractSigner: BackboneElement {
 					self.type = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -777,7 +777,7 @@ public class ContractTerm: BackboneElement {
 					self.action = CodeableConcept.instantiate(fromArray: val, owner: self) as? [CodeableConcept]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "action", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "action", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["actionReason"] {
@@ -786,7 +786,7 @@ public class ContractTerm: BackboneElement {
 					self.actionReason = CodeableConcept.instantiate(fromArray: val, owner: self) as? [CodeableConcept]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "actionReason", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "actionReason", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["actor"] {
@@ -795,7 +795,7 @@ public class ContractTerm: BackboneElement {
 					self.actor = ContractTermActor.instantiate(fromArray: val, owner: self) as? [ContractTermActor]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "actor", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "actor", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["applies"] {
@@ -804,7 +804,7 @@ public class ContractTerm: BackboneElement {
 					self.applies = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "applies", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "applies", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["group"] {
@@ -813,7 +813,7 @@ public class ContractTerm: BackboneElement {
 					self.group = ContractTerm.instantiate(fromArray: val, owner: self) as? [ContractTerm]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "group", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "group", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -822,7 +822,7 @@ public class ContractTerm: BackboneElement {
 					self.identifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["issued"] {
@@ -831,7 +831,7 @@ public class ContractTerm: BackboneElement {
 					self.issued = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "issued", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "issued", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["subType"] {
@@ -840,7 +840,7 @@ public class ContractTerm: BackboneElement {
 					self.subType = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subType", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subType", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["subject"] {
@@ -849,7 +849,7 @@ public class ContractTerm: BackboneElement {
 					self.subject = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subject", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subject", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["text"] {
@@ -858,7 +858,7 @@ public class ContractTerm: BackboneElement {
 					self.text = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "text", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "text", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -867,7 +867,7 @@ public class ContractTerm: BackboneElement {
 					self.type = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["valuedItem"] {
@@ -876,7 +876,7 @@ public class ContractTerm: BackboneElement {
 					self.valuedItem = ContractTermValuedItem.instantiate(fromArray: val, owner: self) as? [ContractTermValuedItem]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "valuedItem", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "valuedItem", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

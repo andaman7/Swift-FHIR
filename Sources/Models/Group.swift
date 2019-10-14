@@ -67,7 +67,7 @@ public class Group: DomainResource {
 					self.actual = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "actual", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "actual", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -79,7 +79,7 @@ public class Group: DomainResource {
 					self.characteristic = GroupCharacteristic.instantiate(fromArray: val, owner: self) as? [GroupCharacteristic]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "characteristic", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "characteristic", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["code"] {
@@ -88,7 +88,7 @@ public class Group: DomainResource {
 					self.code = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -97,7 +97,7 @@ public class Group: DomainResource {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["member"] {
@@ -106,7 +106,7 @@ public class Group: DomainResource {
 					self.member = GroupMember.instantiate(fromArray: val, owner: self) as? [GroupMember]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "member", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "member", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["name"] {
@@ -115,7 +115,7 @@ public class Group: DomainResource {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["quantity"] {
@@ -124,7 +124,7 @@ public class Group: DomainResource {
 					self.quantity = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "quantity", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "quantity", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -133,7 +133,7 @@ public class Group: DomainResource {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

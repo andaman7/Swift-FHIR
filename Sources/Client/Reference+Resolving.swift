@@ -137,7 +137,7 @@ extension Reference {
 	/** Strips the leading hash "#" symbol, if it's there, in order to perform a contained resource lookup. */
 	func processedReferenceIdentifier() -> String? {
 		if nil != reference && "#" == reference![reference!.startIndex] {
-			return reference![reference!.index(reference!.startIndex, offsetBy: 1)..<reference!.endIndex]
+			return String(reference![reference!.index(reference!.startIndex, offsetBy: 1)..<reference!.endIndex])
 		}
 		return reference
 	}

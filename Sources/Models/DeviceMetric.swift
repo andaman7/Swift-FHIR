@@ -72,7 +72,7 @@ public class DeviceMetric: DomainResource {
 					self.calibration = DeviceMetricCalibration.instantiate(fromArray: val, owner: self) as? [DeviceMetricCalibration]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "calibration", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "calibration", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["category"] {
@@ -81,7 +81,7 @@ public class DeviceMetric: DomainResource {
 					self.category = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "category", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "category", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -93,7 +93,7 @@ public class DeviceMetric: DomainResource {
 					self.color = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "color", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "color", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -102,7 +102,7 @@ public class DeviceMetric: DomainResource {
 					self.identifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -114,7 +114,7 @@ public class DeviceMetric: DomainResource {
 					self.measurementPeriod = Timing(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "measurementPeriod", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "measurementPeriod", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["operationalStatus"] {
@@ -123,7 +123,7 @@ public class DeviceMetric: DomainResource {
 					self.operationalStatus = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "operationalStatus", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "operationalStatus", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["parent"] {
@@ -132,7 +132,7 @@ public class DeviceMetric: DomainResource {
 					self.parent = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "parent", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "parent", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["source"] {
@@ -141,7 +141,7 @@ public class DeviceMetric: DomainResource {
 					self.source = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "source", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "source", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -150,7 +150,7 @@ public class DeviceMetric: DomainResource {
 					self.type = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -162,7 +162,7 @@ public class DeviceMetric: DomainResource {
 					self.unit = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "unit", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "unit", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
@@ -240,7 +240,7 @@ public class DeviceMetricCalibration: BackboneElement {
 					self.state = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "state", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "state", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["time"] {
@@ -249,7 +249,7 @@ public class DeviceMetricCalibration: BackboneElement {
 					self.time = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "time", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "time", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -258,7 +258,7 @@ public class DeviceMetricCalibration: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

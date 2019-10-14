@@ -229,7 +229,7 @@ public class SubscriptionChannel: BackboneElement {
 					self.endpoint = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "endpoint", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "endpoint", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["header"] {
@@ -238,7 +238,7 @@ public class SubscriptionChannel: BackboneElement {
 					self.header = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "header", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "header", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["payload"] {
@@ -247,7 +247,7 @@ public class SubscriptionChannel: BackboneElement {
 					self.payload = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "payload", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "payload", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -259,7 +259,7 @@ public class SubscriptionChannel: BackboneElement {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

@@ -327,7 +327,7 @@ public class PaymentReconciliationDetail: BackboneElement {
 					self.amount = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "amount", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["date"] {
@@ -336,7 +336,7 @@ public class PaymentReconciliationDetail: BackboneElement {
 					self.date = FHIRDate(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "date", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "date", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["payee"] {
@@ -345,7 +345,7 @@ public class PaymentReconciliationDetail: BackboneElement {
 					self.payee = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "payee", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "payee", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["request"] {
@@ -354,7 +354,7 @@ public class PaymentReconciliationDetail: BackboneElement {
 					self.request = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "request", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "request", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["responce"] {
@@ -363,7 +363,7 @@ public class PaymentReconciliationDetail: BackboneElement {
 					self.responce = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "responce", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "responce", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["submitter"] {
@@ -372,7 +372,7 @@ public class PaymentReconciliationDetail: BackboneElement {
 					self.submitter = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "submitter", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "submitter", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -381,7 +381,7 @@ public class PaymentReconciliationDetail: BackboneElement {
 					self.type = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -452,7 +452,7 @@ public class PaymentReconciliationNote: BackboneElement {
 					self.text = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "text", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "text", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -461,7 +461,7 @@ public class PaymentReconciliationNote: BackboneElement {
 					self.type = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

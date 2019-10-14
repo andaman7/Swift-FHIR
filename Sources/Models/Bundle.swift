@@ -55,7 +55,7 @@ public class Bundle: Resource {
 					self.entry = BundleEntry.instantiate(fromArray: val, owner: self) as? [BundleEntry]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "entry", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "entry", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["link"] {
@@ -64,7 +64,7 @@ public class Bundle: Resource {
 					self.link = BundleLink.instantiate(fromArray: val, owner: self) as? [BundleLink]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "link", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "link", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["signature"] {
@@ -73,7 +73,7 @@ public class Bundle: Resource {
 					self.signature = Signature(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "signature", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "signature", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["total"] {
@@ -82,7 +82,7 @@ public class Bundle: Resource {
 					self.total = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "total", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "total", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -91,7 +91,7 @@ public class Bundle: Resource {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {

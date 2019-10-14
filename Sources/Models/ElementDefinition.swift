@@ -709,7 +709,7 @@ public class ElementDefinition: Element {
 					self.alias = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "alias", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "alias", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["base"] {
@@ -718,7 +718,7 @@ public class ElementDefinition: Element {
 					self.base = ElementDefinitionBase(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "base", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "base", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["binding"] {
@@ -727,7 +727,7 @@ public class ElementDefinition: Element {
 					self.binding = ElementDefinitionBinding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "binding", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "binding", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["code"] {
@@ -736,7 +736,7 @@ public class ElementDefinition: Element {
 					self.code = Coding.instantiate(fromArray: val, owner: self) as? [Coding]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["comments"] {
@@ -745,7 +745,7 @@ public class ElementDefinition: Element {
 					self.comments = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "comments", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "comments", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["condition"] {
@@ -754,7 +754,7 @@ public class ElementDefinition: Element {
 					self.condition = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "condition", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "condition", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["constraint"] {
@@ -763,7 +763,7 @@ public class ElementDefinition: Element {
 					self.constraint = ElementDefinitionConstraint.instantiate(fromArray: val, owner: self) as? [ElementDefinitionConstraint]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "constraint", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "constraint", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueAddress"] {
@@ -772,7 +772,7 @@ public class ElementDefinition: Element {
 					self.defaultValueAddress = Address(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueAddress", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueAddress", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueAnnotation"] {
@@ -781,7 +781,7 @@ public class ElementDefinition: Element {
 					self.defaultValueAnnotation = Annotation(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueAnnotation", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueAnnotation", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueAttachment"] {
@@ -790,7 +790,7 @@ public class ElementDefinition: Element {
 					self.defaultValueAttachment = Attachment(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueAttachment", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueAttachment", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueBase64Binary"] {
@@ -799,7 +799,7 @@ public class ElementDefinition: Element {
 					self.defaultValueBase64Binary = Base64Binary(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueBase64Binary", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueBase64Binary", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueBoolean"] {
@@ -808,7 +808,7 @@ public class ElementDefinition: Element {
 					self.defaultValueBoolean = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueBoolean", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueBoolean", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueCode"] {
@@ -817,7 +817,7 @@ public class ElementDefinition: Element {
 					self.defaultValueCode = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueCode", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueCode", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueCodeableConcept"] {
@@ -826,7 +826,7 @@ public class ElementDefinition: Element {
 					self.defaultValueCodeableConcept = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueCodeableConcept", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueCodeableConcept", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueCoding"] {
@@ -835,7 +835,7 @@ public class ElementDefinition: Element {
 					self.defaultValueCoding = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueCoding", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueCoding", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueContactPoint"] {
@@ -844,7 +844,7 @@ public class ElementDefinition: Element {
 					self.defaultValueContactPoint = ContactPoint(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueContactPoint", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueContactPoint", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueDate"] {
@@ -853,7 +853,7 @@ public class ElementDefinition: Element {
 					self.defaultValueDate = FHIRDate(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueDate", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueDate", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueDateTime"] {
@@ -862,7 +862,7 @@ public class ElementDefinition: Element {
 					self.defaultValueDateTime = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueDateTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueDateTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueDecimal"] {
@@ -871,7 +871,7 @@ public class ElementDefinition: Element {
 					self.defaultValueDecimal = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueDecimal", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueDecimal", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueHumanName"] {
@@ -880,7 +880,7 @@ public class ElementDefinition: Element {
 					self.defaultValueHumanName = HumanName(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueHumanName", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueHumanName", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueId"] {
@@ -889,7 +889,7 @@ public class ElementDefinition: Element {
 					self.defaultValueId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueId", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueId", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueIdentifier"] {
@@ -898,7 +898,7 @@ public class ElementDefinition: Element {
 					self.defaultValueIdentifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueIdentifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueIdentifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueInstant"] {
@@ -907,7 +907,7 @@ public class ElementDefinition: Element {
 					self.defaultValueInstant = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueInstant", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueInstant", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueInteger"] {
@@ -916,7 +916,7 @@ public class ElementDefinition: Element {
 					self.defaultValueInteger = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueInteger", wants: Int.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueInteger", wants: Int.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueMarkdown"] {
@@ -925,7 +925,7 @@ public class ElementDefinition: Element {
 					self.defaultValueMarkdown = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueMarkdown", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueMarkdown", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueMeta"] {
@@ -934,7 +934,7 @@ public class ElementDefinition: Element {
 					self.defaultValueMeta = Meta(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueMeta", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueMeta", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueOid"] {
@@ -943,7 +943,7 @@ public class ElementDefinition: Element {
 					self.defaultValueOid = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueOid", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueOid", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValuePeriod"] {
@@ -952,7 +952,7 @@ public class ElementDefinition: Element {
 					self.defaultValuePeriod = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValuePeriod", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValuePeriod", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValuePositiveInt"] {
@@ -961,7 +961,7 @@ public class ElementDefinition: Element {
 					self.defaultValuePositiveInt = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValuePositiveInt", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValuePositiveInt", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueQuantity"] {
@@ -970,7 +970,7 @@ public class ElementDefinition: Element {
 					self.defaultValueQuantity = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueQuantity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueQuantity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueRange"] {
@@ -979,7 +979,7 @@ public class ElementDefinition: Element {
 					self.defaultValueRange = Range(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueRange", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueRange", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueRatio"] {
@@ -988,7 +988,7 @@ public class ElementDefinition: Element {
 					self.defaultValueRatio = Ratio(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueRatio", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueRatio", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueReference"] {
@@ -997,7 +997,7 @@ public class ElementDefinition: Element {
 					self.defaultValueReference = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueReference", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueReference", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueSampledData"] {
@@ -1006,7 +1006,7 @@ public class ElementDefinition: Element {
 					self.defaultValueSampledData = SampledData(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueSampledData", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueSampledData", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueSignature"] {
@@ -1015,7 +1015,7 @@ public class ElementDefinition: Element {
 					self.defaultValueSignature = Signature(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueSignature", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueSignature", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueString"] {
@@ -1024,7 +1024,7 @@ public class ElementDefinition: Element {
 					self.defaultValueString = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueString", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueString", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueTime"] {
@@ -1033,7 +1033,7 @@ public class ElementDefinition: Element {
 					self.defaultValueTime = FHIRTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueTiming"] {
@@ -1042,7 +1042,7 @@ public class ElementDefinition: Element {
 					self.defaultValueTiming = Timing(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueTiming", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueTiming", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueUnsignedInt"] {
@@ -1051,7 +1051,7 @@ public class ElementDefinition: Element {
 					self.defaultValueUnsignedInt = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueUnsignedInt", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueUnsignedInt", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["defaultValueUri"] {
@@ -1060,7 +1060,7 @@ public class ElementDefinition: Element {
 					self.defaultValueUri = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "defaultValueUri", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "defaultValueUri", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["definition"] {
@@ -1069,7 +1069,7 @@ public class ElementDefinition: Element {
 					self.definition = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "definition", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "definition", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleAddress"] {
@@ -1078,7 +1078,7 @@ public class ElementDefinition: Element {
 					self.exampleAddress = Address(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleAddress", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleAddress", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleAnnotation"] {
@@ -1087,7 +1087,7 @@ public class ElementDefinition: Element {
 					self.exampleAnnotation = Annotation(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleAnnotation", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleAnnotation", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleAttachment"] {
@@ -1096,7 +1096,7 @@ public class ElementDefinition: Element {
 					self.exampleAttachment = Attachment(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleAttachment", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleAttachment", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleBase64Binary"] {
@@ -1105,7 +1105,7 @@ public class ElementDefinition: Element {
 					self.exampleBase64Binary = Base64Binary(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleBase64Binary", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleBase64Binary", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleBoolean"] {
@@ -1114,7 +1114,7 @@ public class ElementDefinition: Element {
 					self.exampleBoolean = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleBoolean", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleBoolean", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleCode"] {
@@ -1123,7 +1123,7 @@ public class ElementDefinition: Element {
 					self.exampleCode = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleCode", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleCode", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleCodeableConcept"] {
@@ -1132,7 +1132,7 @@ public class ElementDefinition: Element {
 					self.exampleCodeableConcept = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleCodeableConcept", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleCodeableConcept", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleCoding"] {
@@ -1141,7 +1141,7 @@ public class ElementDefinition: Element {
 					self.exampleCoding = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleCoding", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleCoding", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleContactPoint"] {
@@ -1150,7 +1150,7 @@ public class ElementDefinition: Element {
 					self.exampleContactPoint = ContactPoint(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleContactPoint", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleContactPoint", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleDate"] {
@@ -1159,7 +1159,7 @@ public class ElementDefinition: Element {
 					self.exampleDate = FHIRDate(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleDate", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleDate", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleDateTime"] {
@@ -1168,7 +1168,7 @@ public class ElementDefinition: Element {
 					self.exampleDateTime = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleDateTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleDateTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleDecimal"] {
@@ -1177,7 +1177,7 @@ public class ElementDefinition: Element {
 					self.exampleDecimal = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleDecimal", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleDecimal", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleHumanName"] {
@@ -1186,7 +1186,7 @@ public class ElementDefinition: Element {
 					self.exampleHumanName = HumanName(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleHumanName", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleHumanName", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleId"] {
@@ -1195,7 +1195,7 @@ public class ElementDefinition: Element {
 					self.exampleId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleId", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleId", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleIdentifier"] {
@@ -1204,7 +1204,7 @@ public class ElementDefinition: Element {
 					self.exampleIdentifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleIdentifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleIdentifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleInstant"] {
@@ -1213,7 +1213,7 @@ public class ElementDefinition: Element {
 					self.exampleInstant = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleInstant", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleInstant", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleInteger"] {
@@ -1222,7 +1222,7 @@ public class ElementDefinition: Element {
 					self.exampleInteger = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleInteger", wants: Int.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleInteger", wants: Int.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleMarkdown"] {
@@ -1231,7 +1231,7 @@ public class ElementDefinition: Element {
 					self.exampleMarkdown = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleMarkdown", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleMarkdown", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleMeta"] {
@@ -1240,7 +1240,7 @@ public class ElementDefinition: Element {
 					self.exampleMeta = Meta(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleMeta", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleMeta", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleOid"] {
@@ -1249,7 +1249,7 @@ public class ElementDefinition: Element {
 					self.exampleOid = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleOid", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleOid", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["examplePeriod"] {
@@ -1258,7 +1258,7 @@ public class ElementDefinition: Element {
 					self.examplePeriod = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "examplePeriod", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "examplePeriod", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["examplePositiveInt"] {
@@ -1267,7 +1267,7 @@ public class ElementDefinition: Element {
 					self.examplePositiveInt = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "examplePositiveInt", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "examplePositiveInt", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleQuantity"] {
@@ -1276,7 +1276,7 @@ public class ElementDefinition: Element {
 					self.exampleQuantity = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleQuantity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleQuantity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleRange"] {
@@ -1285,7 +1285,7 @@ public class ElementDefinition: Element {
 					self.exampleRange = Range(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleRange", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleRange", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleRatio"] {
@@ -1294,7 +1294,7 @@ public class ElementDefinition: Element {
 					self.exampleRatio = Ratio(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleRatio", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleRatio", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleReference"] {
@@ -1303,7 +1303,7 @@ public class ElementDefinition: Element {
 					self.exampleReference = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleReference", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleReference", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleSampledData"] {
@@ -1312,7 +1312,7 @@ public class ElementDefinition: Element {
 					self.exampleSampledData = SampledData(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleSampledData", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleSampledData", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleSignature"] {
@@ -1321,7 +1321,7 @@ public class ElementDefinition: Element {
 					self.exampleSignature = Signature(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleSignature", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleSignature", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleString"] {
@@ -1330,7 +1330,7 @@ public class ElementDefinition: Element {
 					self.exampleString = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleString", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleString", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleTime"] {
@@ -1339,7 +1339,7 @@ public class ElementDefinition: Element {
 					self.exampleTime = FHIRTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleTiming"] {
@@ -1348,7 +1348,7 @@ public class ElementDefinition: Element {
 					self.exampleTiming = Timing(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleTiming", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleTiming", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleUnsignedInt"] {
@@ -1357,7 +1357,7 @@ public class ElementDefinition: Element {
 					self.exampleUnsignedInt = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleUnsignedInt", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleUnsignedInt", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["exampleUri"] {
@@ -1366,7 +1366,7 @@ public class ElementDefinition: Element {
 					self.exampleUri = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "exampleUri", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "exampleUri", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedAddress"] {
@@ -1375,7 +1375,7 @@ public class ElementDefinition: Element {
 					self.fixedAddress = Address(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedAddress", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedAddress", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedAnnotation"] {
@@ -1384,7 +1384,7 @@ public class ElementDefinition: Element {
 					self.fixedAnnotation = Annotation(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedAnnotation", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedAnnotation", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedAttachment"] {
@@ -1393,7 +1393,7 @@ public class ElementDefinition: Element {
 					self.fixedAttachment = Attachment(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedAttachment", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedAttachment", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedBase64Binary"] {
@@ -1402,7 +1402,7 @@ public class ElementDefinition: Element {
 					self.fixedBase64Binary = Base64Binary(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedBase64Binary", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedBase64Binary", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedBoolean"] {
@@ -1411,7 +1411,7 @@ public class ElementDefinition: Element {
 					self.fixedBoolean = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedBoolean", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedBoolean", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedCode"] {
@@ -1420,7 +1420,7 @@ public class ElementDefinition: Element {
 					self.fixedCode = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedCode", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedCode", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedCodeableConcept"] {
@@ -1429,7 +1429,7 @@ public class ElementDefinition: Element {
 					self.fixedCodeableConcept = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedCodeableConcept", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedCodeableConcept", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedCoding"] {
@@ -1438,7 +1438,7 @@ public class ElementDefinition: Element {
 					self.fixedCoding = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedCoding", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedCoding", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedContactPoint"] {
@@ -1447,7 +1447,7 @@ public class ElementDefinition: Element {
 					self.fixedContactPoint = ContactPoint(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedContactPoint", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedContactPoint", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedDate"] {
@@ -1456,7 +1456,7 @@ public class ElementDefinition: Element {
 					self.fixedDate = FHIRDate(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedDate", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedDate", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedDateTime"] {
@@ -1465,7 +1465,7 @@ public class ElementDefinition: Element {
 					self.fixedDateTime = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedDateTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedDateTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedDecimal"] {
@@ -1474,7 +1474,7 @@ public class ElementDefinition: Element {
 					self.fixedDecimal = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedDecimal", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedDecimal", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedHumanName"] {
@@ -1483,7 +1483,7 @@ public class ElementDefinition: Element {
 					self.fixedHumanName = HumanName(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedHumanName", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedHumanName", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedId"] {
@@ -1492,7 +1492,7 @@ public class ElementDefinition: Element {
 					self.fixedId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedId", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedId", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedIdentifier"] {
@@ -1501,7 +1501,7 @@ public class ElementDefinition: Element {
 					self.fixedIdentifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedIdentifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedIdentifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedInstant"] {
@@ -1510,7 +1510,7 @@ public class ElementDefinition: Element {
 					self.fixedInstant = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedInstant", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedInstant", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedInteger"] {
@@ -1519,7 +1519,7 @@ public class ElementDefinition: Element {
 					self.fixedInteger = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedInteger", wants: Int.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedInteger", wants: Int.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedMarkdown"] {
@@ -1528,7 +1528,7 @@ public class ElementDefinition: Element {
 					self.fixedMarkdown = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedMarkdown", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedMarkdown", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedMeta"] {
@@ -1537,7 +1537,7 @@ public class ElementDefinition: Element {
 					self.fixedMeta = Meta(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedMeta", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedMeta", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedOid"] {
@@ -1546,7 +1546,7 @@ public class ElementDefinition: Element {
 					self.fixedOid = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedOid", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedOid", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedPeriod"] {
@@ -1555,7 +1555,7 @@ public class ElementDefinition: Element {
 					self.fixedPeriod = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedPeriod", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedPeriod", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedPositiveInt"] {
@@ -1564,7 +1564,7 @@ public class ElementDefinition: Element {
 					self.fixedPositiveInt = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedPositiveInt", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedPositiveInt", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedQuantity"] {
@@ -1573,7 +1573,7 @@ public class ElementDefinition: Element {
 					self.fixedQuantity = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedQuantity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedQuantity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedRange"] {
@@ -1582,7 +1582,7 @@ public class ElementDefinition: Element {
 					self.fixedRange = Range(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedRange", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedRange", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedRatio"] {
@@ -1591,7 +1591,7 @@ public class ElementDefinition: Element {
 					self.fixedRatio = Ratio(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedRatio", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedRatio", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedReference"] {
@@ -1600,7 +1600,7 @@ public class ElementDefinition: Element {
 					self.fixedReference = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedReference", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedReference", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedSampledData"] {
@@ -1609,7 +1609,7 @@ public class ElementDefinition: Element {
 					self.fixedSampledData = SampledData(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedSampledData", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedSampledData", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedSignature"] {
@@ -1618,7 +1618,7 @@ public class ElementDefinition: Element {
 					self.fixedSignature = Signature(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedSignature", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedSignature", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedString"] {
@@ -1627,7 +1627,7 @@ public class ElementDefinition: Element {
 					self.fixedString = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedString", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedString", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedTime"] {
@@ -1636,7 +1636,7 @@ public class ElementDefinition: Element {
 					self.fixedTime = FHIRTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedTiming"] {
@@ -1645,7 +1645,7 @@ public class ElementDefinition: Element {
 					self.fixedTiming = Timing(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedTiming", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedTiming", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedUnsignedInt"] {
@@ -1654,7 +1654,7 @@ public class ElementDefinition: Element {
 					self.fixedUnsignedInt = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedUnsignedInt", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedUnsignedInt", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["fixedUri"] {
@@ -1663,7 +1663,7 @@ public class ElementDefinition: Element {
 					self.fixedUri = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "fixedUri", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "fixedUri", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["isModifier"] {
@@ -1672,7 +1672,7 @@ public class ElementDefinition: Element {
 					self.isModifier = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "isModifier", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "isModifier", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["isSummary"] {
@@ -1681,7 +1681,7 @@ public class ElementDefinition: Element {
 					self.isSummary = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "isSummary", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "isSummary", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["label"] {
@@ -1690,7 +1690,7 @@ public class ElementDefinition: Element {
 					self.label = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "label", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "label", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["mapping"] {
@@ -1699,7 +1699,7 @@ public class ElementDefinition: Element {
 					self.mapping = ElementDefinitionMapping.instantiate(fromArray: val, owner: self) as? [ElementDefinitionMapping]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "mapping", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "mapping", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["max"] {
@@ -1708,7 +1708,7 @@ public class ElementDefinition: Element {
 					self.max = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "max", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "max", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxLength"] {
@@ -1717,7 +1717,7 @@ public class ElementDefinition: Element {
 					self.maxLength = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxLength", wants: Int.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxLength", wants: Int.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueAddress"] {
@@ -1726,7 +1726,7 @@ public class ElementDefinition: Element {
 					self.maxValueAddress = Address(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueAddress", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueAddress", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueAnnotation"] {
@@ -1735,7 +1735,7 @@ public class ElementDefinition: Element {
 					self.maxValueAnnotation = Annotation(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueAnnotation", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueAnnotation", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueAttachment"] {
@@ -1744,7 +1744,7 @@ public class ElementDefinition: Element {
 					self.maxValueAttachment = Attachment(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueAttachment", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueAttachment", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueBase64Binary"] {
@@ -1753,7 +1753,7 @@ public class ElementDefinition: Element {
 					self.maxValueBase64Binary = Base64Binary(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueBase64Binary", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueBase64Binary", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueBoolean"] {
@@ -1762,7 +1762,7 @@ public class ElementDefinition: Element {
 					self.maxValueBoolean = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueBoolean", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueBoolean", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueCode"] {
@@ -1771,7 +1771,7 @@ public class ElementDefinition: Element {
 					self.maxValueCode = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueCode", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueCode", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueCodeableConcept"] {
@@ -1780,7 +1780,7 @@ public class ElementDefinition: Element {
 					self.maxValueCodeableConcept = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueCodeableConcept", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueCodeableConcept", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueCoding"] {
@@ -1789,7 +1789,7 @@ public class ElementDefinition: Element {
 					self.maxValueCoding = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueCoding", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueCoding", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueContactPoint"] {
@@ -1798,7 +1798,7 @@ public class ElementDefinition: Element {
 					self.maxValueContactPoint = ContactPoint(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueContactPoint", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueContactPoint", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueDate"] {
@@ -1807,7 +1807,7 @@ public class ElementDefinition: Element {
 					self.maxValueDate = FHIRDate(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueDate", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueDate", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueDateTime"] {
@@ -1816,7 +1816,7 @@ public class ElementDefinition: Element {
 					self.maxValueDateTime = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueDateTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueDateTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueDecimal"] {
@@ -1825,7 +1825,7 @@ public class ElementDefinition: Element {
 					self.maxValueDecimal = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueDecimal", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueDecimal", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueHumanName"] {
@@ -1834,7 +1834,7 @@ public class ElementDefinition: Element {
 					self.maxValueHumanName = HumanName(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueHumanName", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueHumanName", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueId"] {
@@ -1843,7 +1843,7 @@ public class ElementDefinition: Element {
 					self.maxValueId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueId", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueId", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueIdentifier"] {
@@ -1852,7 +1852,7 @@ public class ElementDefinition: Element {
 					self.maxValueIdentifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueIdentifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueIdentifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueInstant"] {
@@ -1861,7 +1861,7 @@ public class ElementDefinition: Element {
 					self.maxValueInstant = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueInstant", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueInstant", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueInteger"] {
@@ -1870,7 +1870,7 @@ public class ElementDefinition: Element {
 					self.maxValueInteger = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueInteger", wants: Int.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueInteger", wants: Int.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueMarkdown"] {
@@ -1879,7 +1879,7 @@ public class ElementDefinition: Element {
 					self.maxValueMarkdown = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueMarkdown", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueMarkdown", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueMeta"] {
@@ -1888,7 +1888,7 @@ public class ElementDefinition: Element {
 					self.maxValueMeta = Meta(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueMeta", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueMeta", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueOid"] {
@@ -1897,7 +1897,7 @@ public class ElementDefinition: Element {
 					self.maxValueOid = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueOid", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueOid", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValuePeriod"] {
@@ -1906,7 +1906,7 @@ public class ElementDefinition: Element {
 					self.maxValuePeriod = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValuePeriod", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValuePeriod", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValuePositiveInt"] {
@@ -1915,7 +1915,7 @@ public class ElementDefinition: Element {
 					self.maxValuePositiveInt = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValuePositiveInt", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValuePositiveInt", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueQuantity"] {
@@ -1924,7 +1924,7 @@ public class ElementDefinition: Element {
 					self.maxValueQuantity = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueQuantity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueQuantity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueRange"] {
@@ -1933,7 +1933,7 @@ public class ElementDefinition: Element {
 					self.maxValueRange = Range(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueRange", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueRange", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueRatio"] {
@@ -1942,7 +1942,7 @@ public class ElementDefinition: Element {
 					self.maxValueRatio = Ratio(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueRatio", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueRatio", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueReference"] {
@@ -1951,7 +1951,7 @@ public class ElementDefinition: Element {
 					self.maxValueReference = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueReference", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueReference", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueSampledData"] {
@@ -1960,7 +1960,7 @@ public class ElementDefinition: Element {
 					self.maxValueSampledData = SampledData(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueSampledData", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueSampledData", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueSignature"] {
@@ -1969,7 +1969,7 @@ public class ElementDefinition: Element {
 					self.maxValueSignature = Signature(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueSignature", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueSignature", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueString"] {
@@ -1978,7 +1978,7 @@ public class ElementDefinition: Element {
 					self.maxValueString = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueString", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueString", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueTime"] {
@@ -1987,7 +1987,7 @@ public class ElementDefinition: Element {
 					self.maxValueTime = FHIRTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueTiming"] {
@@ -1996,7 +1996,7 @@ public class ElementDefinition: Element {
 					self.maxValueTiming = Timing(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueTiming", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueTiming", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueUnsignedInt"] {
@@ -2005,7 +2005,7 @@ public class ElementDefinition: Element {
 					self.maxValueUnsignedInt = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueUnsignedInt", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueUnsignedInt", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["maxValueUri"] {
@@ -2014,7 +2014,7 @@ public class ElementDefinition: Element {
 					self.maxValueUri = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "maxValueUri", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "maxValueUri", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["meaningWhenMissing"] {
@@ -2023,7 +2023,7 @@ public class ElementDefinition: Element {
 					self.meaningWhenMissing = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "meaningWhenMissing", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "meaningWhenMissing", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["min"] {
@@ -2032,7 +2032,7 @@ public class ElementDefinition: Element {
 					self.min = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "min", wants: Int.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "min", wants: Int.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueAddress"] {
@@ -2041,7 +2041,7 @@ public class ElementDefinition: Element {
 					self.minValueAddress = Address(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueAddress", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueAddress", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueAnnotation"] {
@@ -2050,7 +2050,7 @@ public class ElementDefinition: Element {
 					self.minValueAnnotation = Annotation(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueAnnotation", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueAnnotation", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueAttachment"] {
@@ -2059,7 +2059,7 @@ public class ElementDefinition: Element {
 					self.minValueAttachment = Attachment(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueAttachment", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueAttachment", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueBase64Binary"] {
@@ -2068,7 +2068,7 @@ public class ElementDefinition: Element {
 					self.minValueBase64Binary = Base64Binary(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueBase64Binary", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueBase64Binary", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueBoolean"] {
@@ -2077,7 +2077,7 @@ public class ElementDefinition: Element {
 					self.minValueBoolean = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueBoolean", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueBoolean", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueCode"] {
@@ -2086,7 +2086,7 @@ public class ElementDefinition: Element {
 					self.minValueCode = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueCode", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueCode", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueCodeableConcept"] {
@@ -2095,7 +2095,7 @@ public class ElementDefinition: Element {
 					self.minValueCodeableConcept = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueCodeableConcept", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueCodeableConcept", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueCoding"] {
@@ -2104,7 +2104,7 @@ public class ElementDefinition: Element {
 					self.minValueCoding = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueCoding", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueCoding", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueContactPoint"] {
@@ -2113,7 +2113,7 @@ public class ElementDefinition: Element {
 					self.minValueContactPoint = ContactPoint(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueContactPoint", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueContactPoint", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueDate"] {
@@ -2122,7 +2122,7 @@ public class ElementDefinition: Element {
 					self.minValueDate = FHIRDate(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueDate", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueDate", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueDateTime"] {
@@ -2131,7 +2131,7 @@ public class ElementDefinition: Element {
 					self.minValueDateTime = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueDateTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueDateTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueDecimal"] {
@@ -2140,7 +2140,7 @@ public class ElementDefinition: Element {
 					self.minValueDecimal = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueDecimal", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueDecimal", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueHumanName"] {
@@ -2149,7 +2149,7 @@ public class ElementDefinition: Element {
 					self.minValueHumanName = HumanName(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueHumanName", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueHumanName", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueId"] {
@@ -2158,7 +2158,7 @@ public class ElementDefinition: Element {
 					self.minValueId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueId", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueId", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueIdentifier"] {
@@ -2167,7 +2167,7 @@ public class ElementDefinition: Element {
 					self.minValueIdentifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueIdentifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueIdentifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueInstant"] {
@@ -2176,7 +2176,7 @@ public class ElementDefinition: Element {
 					self.minValueInstant = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueInstant", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueInstant", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueInteger"] {
@@ -2185,7 +2185,7 @@ public class ElementDefinition: Element {
 					self.minValueInteger = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueInteger", wants: Int.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueInteger", wants: Int.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueMarkdown"] {
@@ -2194,7 +2194,7 @@ public class ElementDefinition: Element {
 					self.minValueMarkdown = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueMarkdown", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueMarkdown", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueMeta"] {
@@ -2203,7 +2203,7 @@ public class ElementDefinition: Element {
 					self.minValueMeta = Meta(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueMeta", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueMeta", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueOid"] {
@@ -2212,7 +2212,7 @@ public class ElementDefinition: Element {
 					self.minValueOid = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueOid", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueOid", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValuePeriod"] {
@@ -2221,7 +2221,7 @@ public class ElementDefinition: Element {
 					self.minValuePeriod = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValuePeriod", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValuePeriod", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValuePositiveInt"] {
@@ -2230,7 +2230,7 @@ public class ElementDefinition: Element {
 					self.minValuePositiveInt = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValuePositiveInt", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValuePositiveInt", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueQuantity"] {
@@ -2239,7 +2239,7 @@ public class ElementDefinition: Element {
 					self.minValueQuantity = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueQuantity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueQuantity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueRange"] {
@@ -2248,7 +2248,7 @@ public class ElementDefinition: Element {
 					self.minValueRange = Range(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueRange", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueRange", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueRatio"] {
@@ -2257,7 +2257,7 @@ public class ElementDefinition: Element {
 					self.minValueRatio = Ratio(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueRatio", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueRatio", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueReference"] {
@@ -2266,7 +2266,7 @@ public class ElementDefinition: Element {
 					self.minValueReference = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueReference", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueReference", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueSampledData"] {
@@ -2275,7 +2275,7 @@ public class ElementDefinition: Element {
 					self.minValueSampledData = SampledData(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueSampledData", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueSampledData", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueSignature"] {
@@ -2284,7 +2284,7 @@ public class ElementDefinition: Element {
 					self.minValueSignature = Signature(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueSignature", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueSignature", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueString"] {
@@ -2293,7 +2293,7 @@ public class ElementDefinition: Element {
 					self.minValueString = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueString", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueString", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueTime"] {
@@ -2302,7 +2302,7 @@ public class ElementDefinition: Element {
 					self.minValueTime = FHIRTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueTiming"] {
@@ -2311,7 +2311,7 @@ public class ElementDefinition: Element {
 					self.minValueTiming = Timing(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueTiming", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueTiming", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueUnsignedInt"] {
@@ -2320,7 +2320,7 @@ public class ElementDefinition: Element {
 					self.minValueUnsignedInt = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueUnsignedInt", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueUnsignedInt", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["minValueUri"] {
@@ -2329,7 +2329,7 @@ public class ElementDefinition: Element {
 					self.minValueUri = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "minValueUri", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "minValueUri", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["mustSupport"] {
@@ -2338,7 +2338,7 @@ public class ElementDefinition: Element {
 					self.mustSupport = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "mustSupport", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "mustSupport", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["name"] {
@@ -2347,7 +2347,7 @@ public class ElementDefinition: Element {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["nameReference"] {
@@ -2356,7 +2356,7 @@ public class ElementDefinition: Element {
 					self.nameReference = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "nameReference", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "nameReference", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["path"] {
@@ -2365,7 +2365,7 @@ public class ElementDefinition: Element {
 					self.path = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "path", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "path", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -2377,7 +2377,7 @@ public class ElementDefinition: Element {
 					self.patternAddress = Address(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternAddress", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternAddress", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternAnnotation"] {
@@ -2386,7 +2386,7 @@ public class ElementDefinition: Element {
 					self.patternAnnotation = Annotation(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternAnnotation", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternAnnotation", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternAttachment"] {
@@ -2395,7 +2395,7 @@ public class ElementDefinition: Element {
 					self.patternAttachment = Attachment(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternAttachment", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternAttachment", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternBase64Binary"] {
@@ -2404,7 +2404,7 @@ public class ElementDefinition: Element {
 					self.patternBase64Binary = Base64Binary(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternBase64Binary", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternBase64Binary", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternBoolean"] {
@@ -2413,7 +2413,7 @@ public class ElementDefinition: Element {
 					self.patternBoolean = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternBoolean", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternBoolean", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternCode"] {
@@ -2422,7 +2422,7 @@ public class ElementDefinition: Element {
 					self.patternCode = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternCode", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternCode", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternCodeableConcept"] {
@@ -2431,7 +2431,7 @@ public class ElementDefinition: Element {
 					self.patternCodeableConcept = CodeableConcept(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternCodeableConcept", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternCodeableConcept", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternCoding"] {
@@ -2440,7 +2440,7 @@ public class ElementDefinition: Element {
 					self.patternCoding = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternCoding", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternCoding", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternContactPoint"] {
@@ -2449,7 +2449,7 @@ public class ElementDefinition: Element {
 					self.patternContactPoint = ContactPoint(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternContactPoint", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternContactPoint", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternDate"] {
@@ -2458,7 +2458,7 @@ public class ElementDefinition: Element {
 					self.patternDate = FHIRDate(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternDate", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternDate", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternDateTime"] {
@@ -2467,7 +2467,7 @@ public class ElementDefinition: Element {
 					self.patternDateTime = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternDateTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternDateTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternDecimal"] {
@@ -2476,7 +2476,7 @@ public class ElementDefinition: Element {
 					self.patternDecimal = NSDecimalNumber(json: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternDecimal", wants: NSNumber.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternDecimal", wants: NSNumber.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternHumanName"] {
@@ -2485,7 +2485,7 @@ public class ElementDefinition: Element {
 					self.patternHumanName = HumanName(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternHumanName", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternHumanName", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternId"] {
@@ -2494,7 +2494,7 @@ public class ElementDefinition: Element {
 					self.patternId = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternId", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternId", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternIdentifier"] {
@@ -2503,7 +2503,7 @@ public class ElementDefinition: Element {
 					self.patternIdentifier = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternIdentifier", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternIdentifier", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternInstant"] {
@@ -2512,7 +2512,7 @@ public class ElementDefinition: Element {
 					self.patternInstant = Instant(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternInstant", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternInstant", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternInteger"] {
@@ -2521,7 +2521,7 @@ public class ElementDefinition: Element {
 					self.patternInteger = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternInteger", wants: Int.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternInteger", wants: Int.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternMarkdown"] {
@@ -2530,7 +2530,7 @@ public class ElementDefinition: Element {
 					self.patternMarkdown = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternMarkdown", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternMarkdown", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternMeta"] {
@@ -2539,7 +2539,7 @@ public class ElementDefinition: Element {
 					self.patternMeta = Meta(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternMeta", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternMeta", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternOid"] {
@@ -2548,7 +2548,7 @@ public class ElementDefinition: Element {
 					self.patternOid = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternOid", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternOid", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternPeriod"] {
@@ -2557,7 +2557,7 @@ public class ElementDefinition: Element {
 					self.patternPeriod = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternPeriod", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternPeriod", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternPositiveInt"] {
@@ -2566,7 +2566,7 @@ public class ElementDefinition: Element {
 					self.patternPositiveInt = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternPositiveInt", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternPositiveInt", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternQuantity"] {
@@ -2575,7 +2575,7 @@ public class ElementDefinition: Element {
 					self.patternQuantity = Quantity(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternQuantity", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternQuantity", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternRange"] {
@@ -2584,7 +2584,7 @@ public class ElementDefinition: Element {
 					self.patternRange = Range(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternRange", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternRange", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternRatio"] {
@@ -2593,7 +2593,7 @@ public class ElementDefinition: Element {
 					self.patternRatio = Ratio(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternRatio", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternRatio", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternReference"] {
@@ -2602,7 +2602,7 @@ public class ElementDefinition: Element {
 					self.patternReference = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternReference", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternReference", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternSampledData"] {
@@ -2611,7 +2611,7 @@ public class ElementDefinition: Element {
 					self.patternSampledData = SampledData(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternSampledData", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternSampledData", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternSignature"] {
@@ -2620,7 +2620,7 @@ public class ElementDefinition: Element {
 					self.patternSignature = Signature(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternSignature", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternSignature", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternString"] {
@@ -2629,7 +2629,7 @@ public class ElementDefinition: Element {
 					self.patternString = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternString", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternString", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternTime"] {
@@ -2638,7 +2638,7 @@ public class ElementDefinition: Element {
 					self.patternTime = FHIRTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternTime", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternTime", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternTiming"] {
@@ -2647,7 +2647,7 @@ public class ElementDefinition: Element {
 					self.patternTiming = Timing(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternTiming", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternTiming", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternUnsignedInt"] {
@@ -2656,7 +2656,7 @@ public class ElementDefinition: Element {
 					self.patternUnsignedInt = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternUnsignedInt", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternUnsignedInt", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["patternUri"] {
@@ -2665,7 +2665,7 @@ public class ElementDefinition: Element {
 					self.patternUri = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "patternUri", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "patternUri", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["representation"] {
@@ -2674,7 +2674,7 @@ public class ElementDefinition: Element {
 					self.representation = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "representation", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "representation", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["requirements"] {
@@ -2683,7 +2683,7 @@ public class ElementDefinition: Element {
 					self.requirements = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "requirements", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "requirements", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["short"] {
@@ -2692,7 +2692,7 @@ public class ElementDefinition: Element {
 					self.short = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "short", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "short", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["slicing"] {
@@ -2701,7 +2701,7 @@ public class ElementDefinition: Element {
 					self.slicing = ElementDefinitionSlicing(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "slicing", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "slicing", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -2710,7 +2710,7 @@ public class ElementDefinition: Element {
 					self.type = ElementDefinitionType.instantiate(fromArray: val, owner: self) as? [ElementDefinitionType]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

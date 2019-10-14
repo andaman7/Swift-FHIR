@@ -39,8 +39,8 @@ open class FHIRAbstractResource: FHIRAbstractBase {
 		}
 		if let type = json["resourceType"] as? String {
 			presentKeys.insert("resourceType")
-			if type != type(of: self).resourceType {
-				return [FHIRJSONError.init(key: "resourceType", problem: "should be “\(type(of: self).resourceType)” but is “\(type)”")]
+			if type != Swift.type(of: self).resourceType {
+				return [FHIRJSONError.init(key: "resourceType", problem: "should be “\(Swift.type(of: self).resourceType)” but is “\(type)”")]
 			}
 			return super.populate(from: json, presentKeys: &presentKeys)
 		}

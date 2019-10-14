@@ -76,7 +76,7 @@ public class Coverage: DomainResource {
 					self.bin = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "bin", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "bin", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["contract"] {
@@ -85,7 +85,7 @@ public class Coverage: DomainResource {
 					self.contract = Reference.instantiate(fromArray: val, owner: self) as? [Reference]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contract", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contract", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["dependent"] {
@@ -94,7 +94,7 @@ public class Coverage: DomainResource {
 					self.dependent = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "dependent", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "dependent", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["group"] {
@@ -103,7 +103,7 @@ public class Coverage: DomainResource {
 					self.group = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "group", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "group", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["identifier"] {
@@ -112,7 +112,7 @@ public class Coverage: DomainResource {
 					self.identifier = Identifier.instantiate(fromArray: val, owner: self) as? [Identifier]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "identifier", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["issuer"] {
@@ -121,7 +121,7 @@ public class Coverage: DomainResource {
 					self.issuer = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "issuer", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "issuer", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["network"] {
@@ -130,7 +130,7 @@ public class Coverage: DomainResource {
 					self.network = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "network", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "network", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["period"] {
@@ -139,7 +139,7 @@ public class Coverage: DomainResource {
 					self.period = Period(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "period", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["plan"] {
@@ -148,7 +148,7 @@ public class Coverage: DomainResource {
 					self.plan = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "plan", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "plan", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["sequence"] {
@@ -157,7 +157,7 @@ public class Coverage: DomainResource {
 					self.sequence = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "sequence", wants: UInt.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "sequence", wants: UInt.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["subPlan"] {
@@ -166,7 +166,7 @@ public class Coverage: DomainResource {
 					self.subPlan = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subPlan", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subPlan", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["subscriber"] {
@@ -175,7 +175,7 @@ public class Coverage: DomainResource {
 					self.subscriber = Reference(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subscriber", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subscriber", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["subscriberId"] {
@@ -184,7 +184,7 @@ public class Coverage: DomainResource {
 					self.subscriberId = Identifier(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "subscriberId", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "subscriberId", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -193,7 +193,7 @@ public class Coverage: DomainResource {
 					self.type = Coding(json: val, owner: self)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: FHIRJSON.self, has: Swift.type(of: exist)))
 				}
 			}
 		}

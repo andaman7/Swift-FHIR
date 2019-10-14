@@ -90,7 +90,7 @@ public class SearchParameter: DomainResource {
 					self.base = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "base", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "base", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -102,7 +102,7 @@ public class SearchParameter: DomainResource {
 					self.code = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "code", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "code", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -114,7 +114,7 @@ public class SearchParameter: DomainResource {
 					self.contact = SearchParameterContact.instantiate(fromArray: val, owner: self) as? [SearchParameterContact]
 				}
 				else {
-					errors.append(FHIRJSONError(key: "contact", wants: Array<FHIRJSON>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "contact", wants: Array<FHIRJSON>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["date"] {
@@ -123,7 +123,7 @@ public class SearchParameter: DomainResource {
 					self.date = DateTime(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "date", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "date", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["description"] {
@@ -132,7 +132,7 @@ public class SearchParameter: DomainResource {
 					self.description_fhir = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "description", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "description", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -144,7 +144,7 @@ public class SearchParameter: DomainResource {
 					self.experimental = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "experimental", wants: Bool.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "experimental", wants: Bool.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["name"] {
@@ -153,7 +153,7 @@ public class SearchParameter: DomainResource {
 					self.name = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "name", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "name", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -165,7 +165,7 @@ public class SearchParameter: DomainResource {
 					self.publisher = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "publisher", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "publisher", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["requirements"] {
@@ -174,7 +174,7 @@ public class SearchParameter: DomainResource {
 					self.requirements = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "requirements", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "requirements", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["status"] {
@@ -183,7 +183,7 @@ public class SearchParameter: DomainResource {
 					self.status = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "status", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "status", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["target"] {
@@ -192,7 +192,7 @@ public class SearchParameter: DomainResource {
 					self.target = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "target", wants: Array<String>.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "target", wants: Array<String>.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["type"] {
@@ -201,7 +201,7 @@ public class SearchParameter: DomainResource {
 					self.type = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "type", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "type", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -213,7 +213,7 @@ public class SearchParameter: DomainResource {
 					self.url = URL(string: val)
 				}
 				else {
-					errors.append(FHIRJSONError(key: "url", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "url", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			else {
@@ -225,7 +225,7 @@ public class SearchParameter: DomainResource {
 					self.xpath = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "xpath", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "xpath", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 			if let exist = js["xpathUsage"] {
@@ -234,7 +234,7 @@ public class SearchParameter: DomainResource {
 					self.xpathUsage = val
 				}
 				else {
-					errors.append(FHIRJSONError(key: "xpathUsage", wants: String.self, has: type(of: exist)))
+					errors.append(FHIRJSONError(key: "xpathUsage", wants: String.self, has: Swift.type(of: exist)))
 				}
 			}
 		}
